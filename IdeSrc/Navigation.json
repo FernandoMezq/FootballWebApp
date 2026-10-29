@@ -1,0 +1,52 @@
+{
+   "Projects": [
+     {
+       "nZoom": 1,
+       "nPositionX": -434,
+       "nPositionY": -179,
+       "nWidth": 1191,
+       "nHeight": 670,
+       "sProject": "WebApp.src",
+       "bShowWebApp": true,
+       "bShowHidden": false,
+       "Elements": [
+         {
+           "Name": "oDashboard",
+           "Position": {
+             "sX": "0",
+             "sY": "12.5"
+           },
+           "TabColor": {
+             "sColorDM": "#001634",
+             "sColorLM": "#CBE3FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oLogin",
+           "Position": {
+             "sX": "-425",
+             "sY": "0"
+           },
+           "TabColor": {
+             "sColorDM": "#006EFF",
+             "sColorLM": "#006EFF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oWebApp",
+           "Position": {
+             "sX": "720",
+             "sY": "0"
+           },
+           "TabColor": {
+             "sColorDM": "#0058CF",
+             "sColorLM": "#2B8CFF"
+           },
+           "bHidden": false
+         }
+       ]
+     }
+   ]
+ }
