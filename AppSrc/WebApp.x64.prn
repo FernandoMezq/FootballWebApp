@@ -1,5 +1,5 @@
 Compiling Program: D:\ProyectosGit\FootballWebApp\AppSrc\WebApp.src
-Memory Available: 45462487040
+Memory Available: 43423182848
 1>Use AllWebAppClasses.pkg
 Using pre-compiled package ALLWEBAPPCLASSES.PKG
 Including file: AllWebAppClasses.x64.pkd    (D:\dataflex\Pkg\AllWebAppClasses.x64.pkd)
@@ -1436,10 +1436,13 @@ Including file: Dashboard.wo    (D:\ProyectosGit\FootballWebApp\AppSrc\Dashboard
 37301>>>                Set piColumnIndex to 6
 37302>>>                Set psCSSClass to "Tile LightAlternate"
 37303>>>                Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Equipo</div><div class="Tile_Subtitle"></div></div>'
-37304>>>                                
+37304>>>                           
+37304>>>              
+37304>>>               
 37304>>>              
 37304>>>                Procedure OnClick String sId String sParam
 37307>>>                    Send NavigatePath
+37308>>>                    
 37308>>>                End_Procedure
 37309>>>                
 37309>>>            End_Object
@@ -1488,10 +1491,10 @@ Including file: Dashboard.wo    (D:\ProyectosGit\FootballWebApp\AppSrc\Dashboard
 37344>Send StartWebApp of oWebApp
 37345>
 Summary
-Memory Available: 45455519744
+Memory Available: 43419574272
 Total Warnings : 0
 Total Errors   : 0
-Total Symbols  : 25147
+Total Symbols  : 25145
 Total Resources: 0
 Total Commands : 37344
 Total Windows  : 0
