@@ -1,0 +1,18 @@
+﻿# Claves y credenciales locales
+AppSrc/LoginEncryptionKey.inc
+AppSrc/WebAppEncryptionKey.inc
+
+# Configuracion local de conexiones
+Data/DFConnId.ini
+
+# Copias de seguridad y archivos temporales
+*.backup
+*.bak
+*.tmp
+*.log
+
+# Errores de compilacion
+*.err
+
+# Estado local del IDE
+IdeSrc/*_Breakpoints.dsk
