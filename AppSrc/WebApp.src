@@ -11,8 +11,7 @@ Object oWebApp is a cWebApp
     Set psTheme to "Df_Material"
     Set peAlignView to alignCenter
     
-    // It is important to set this so that all views will default
-    // to drill down style views.
+
     Set peApplicationStyle to wvsDrillDown   
     Set peApplicationStateMode to asmHistoryAndUrls 
     Set psEncryptPassword to "&i93zS0sm(6B8:2Wqy*`FV)XLgD6StxJ4rN66arq"
@@ -121,6 +120,7 @@ Object oWebApp is a cWebApp
             Set peRegion to prBottom
             
             Object oHorizontalBreadcrumb is a cWebBreadcrumb
+                Set piColumnIndex to 0
                 WebSetResponsive pbRender rmMobile to False
             End_Object         
         End_Object
