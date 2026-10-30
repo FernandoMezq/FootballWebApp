@@ -1,5 +1,5 @@
 ﻿// D:\ProyectosGit\FootballWebApp\AppSrc\PosicionSelct.wo
-// PosicionSelct
+// PosicionSelect
 //
 
 Use cWebView.pkg
@@ -12,7 +12,7 @@ Use PosicionZoom.wo
 
 Use cposicionDataDictionary.dd
 
-Object oPosicionSelct is a cWebView
+Object oPosicionSelect is a cWebView
     Set psCaption to "PosicionSelct"
     Set peWebViewStyle to wvsDrilldown
     Set peViewType to vtSelect

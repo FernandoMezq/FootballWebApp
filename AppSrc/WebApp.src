@@ -171,6 +171,14 @@ Object oWebApp is a cWebApp
     Use JugadorZoom.wo
     Use JugadorSelect.wo
     Use LigaZoom.wo
+    Use LigaSelect.wo
+    Use PosicionZoom.wo
+    Use PosicionSelect.wo
+    Use EntrenadorZoom.wo
+    Use EntrenadorSelect.wo
+    Use JugadorPosicionZoom.wo
+    Use JugadorPosicionSelect.wo
+    
     Set phoDefaultView to oDashboard
 
 End_Object
