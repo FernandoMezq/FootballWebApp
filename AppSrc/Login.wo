@@ -15,10 +15,10 @@ Object oLogin is a cWebView
     Set pbServerOnSubmit to True
     
     Set psStateViewName to "Login"
-    Set pbStateReplace to True  // Always replace the state so the login never becomes its own history item
+    Set pbStateReplace to True  
     
     { WebProperty=Server }
-    Property String psPrevStateHash ""  // Remember the state hash that the user navigated too so we can redirect after login
+    Property String psPrevStateHash ""  
     
     Delegate Set phoLoginView to Self
     
@@ -26,6 +26,7 @@ Object oLogin is a cWebView
         Set pbFillHeight to True
         Set piColumnSpan to 12
     End_Object
+    
     
     Object oWarning is a cWebLabel
         Set pbVisible to False
@@ -42,7 +43,7 @@ Object oLogin is a cWebView
         Set piColumnIndex to 1
         Set piHeight to 160
         
-        WebSetResponsive piHeight rmMobile to 100  // Best for small smart phones
+        WebSetResponsive piHeight rmMobile to 100  
     End_Object
     
     Object oLoginName is a cWebForm
@@ -108,7 +109,7 @@ Object oLogin is a cWebView
             WebGet psPrevStateHash to sPrevStateHash
             Send NavigateToStateHash of ghoWebApp sPrevStateHash True
             
-            // clear the login values. we don't want to return the login id & password as synchronized properties....
+            
             WebSet psValue of oLoginName to ""
             WebSet psValue of oPassword  to ""
             WebSet pbVisible of oWarning to False
@@ -127,7 +128,7 @@ Object oLogin is a cWebView
         
         Forward Send OnLoad
         
-        //  Store the current state so we can go back to that later (only if it points to a different view)
+       
         Get StateHash of ghoWebApp to sPrevStateHash
         Send ParseViewStateHash sPrevStateHash (&sView)
         If (Lowercase(sView) <> Lowercase(psStateViewName(Self))) Begin
@@ -137,7 +138,7 @@ Object oLogin is a cWebView
     End_Procedure
     
     Procedure OnBeforeShow
-        //  Hide header & apply nice background style
+        
         Send HideHeader to ghoWebApp
         WebSet psCSSClass of ghoWebApp to "LoginBackground"
     End_Procedure

@@ -1,5 +1,6 @@
 ﻿Use AllWebAppClasses.pkg
 Use cConnection.pkg
+Use cWebMenuItem.pkg
 
 Object oApplication is a cApplication
     Object oConnection is a cConnection
@@ -11,8 +12,7 @@ Object oWebApp is a cWebApp
     Set psTheme to "Df_Material"
     Set peAlignView to alignCenter
     
-    // It is important to set this so that all views will default
-    // to drill down style views.
+
     Set peApplicationStyle to wvsDrillDown   
     Set peApplicationStateMode to asmHistoryAndUrls 
     Set psEncryptPassword to "&i93zS0sm(6B8:2Wqy*`FV)XLgD6StxJ4rN66arq"
@@ -51,6 +51,28 @@ Object oWebApp is a cWebApp
 
                 Object oViewMenu is a cWebMenuItem
                     Set psCaption to C_$View
+
+                    Object oEquipoSelectItem1 is a cWebMenuItem
+                        Set psCaption to "EquipoSelect"
+
+                        WebRegisterPath ntNavigateBegin oEquipoSelect
+
+                        Procedure OnClick
+                            Forward Send OnClick
+                                Send NavigatePath
+                        End_Procedure
+                    End_Object
+
+                    Object oEquipoSelectItem2 is a cWebMenuItem
+                        Set psCaption to "EquipoSelect"
+
+                        WebRegisterPath ntNavigateBegin oEquipoSelect
+
+                        Procedure OnClick
+                            Forward Send OnClick
+                                Send NavigatePath
+                        End_Procedure
+                    End_Object
                 End_Object
 
                 Object oSignOut_itm is a cWebMenuItem
@@ -121,6 +143,7 @@ Object oWebApp is a cWebApp
             Set peRegion to prBottom
             
             Object oHorizontalBreadcrumb is a cWebBreadcrumb
+                Set piColumnIndex to 0
                 WebSetResponsive pbRender rmMobile to False
             End_Object         
         End_Object
@@ -132,6 +155,8 @@ Object oWebApp is a cWebApp
     Use WebResourceManager.wo
     
     Use Dashboard.wo
+    Use EquipoZoom.wo
+    Use EquipoSelect.wo
     Set phoDefaultView to oDashboard
 
 End_Object
