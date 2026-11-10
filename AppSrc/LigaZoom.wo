@@ -26,11 +26,12 @@ Object oLigaZoom is a cWebView
     Object oliga_DD is a cligaDataDictionary
     End_Object 
     Object oequipo_DD is a cequipoDataDictionary
-    Set DDO_Server to oliga_DD
+        Set DDO_Server to oliga_DD
+        Set Constrain_File to liga.File_Number
     End_Object
 
     Set Main_DD To oliga_DD
-    Set Server  To oliga_DD
+    Set Server  to oliga_DD
 
 
     Object oWebMainPanel is a cWebPanel
@@ -70,16 +71,18 @@ Object oLigaZoom is a cWebView
             Set psLabel to "Equipos"
         End_Object 
 
-        Object oWebList1 is a cWebList
-    Set pbShowHeader to True
+    Object oWebList1 is a cWebList
+        Set Server to oequipo_DD
+        Set pbShowHeader to True
 
-    Object oEquipoNombre is a cWebColumn
-        Entry_Item equipo.Nombre
-        Set psCaption to "Equipo"
-        Set piWidth to 300
+            Object oEquipoNombre is a cWebColumn
+            Entry_Item equipo.Nombre
+                Set psCaption to "Equipo"
+                Set piWidth to 300
+            End_Object
+        
     End_Object
-        End_Object 
-  End_Object
+End_Object
 
     Object oActionGroup is a cWebMenuGroup
 
@@ -173,9 +176,7 @@ End_Procedure
 
    Procedure OnNavigateForward tWebNavigateData NavigateData Integer hoInvokingView Integer hoInvokingObject
 
-    Showln "Vengo de Main"
-    Showln "InvokingView: " hoInvokingView
-    Showln "InvokingObject: " hoInvokingObject
+    
 
     Case Begin
         Case (NavigateData.eNavigateType = nfFromMain)
