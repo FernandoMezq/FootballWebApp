@@ -7,6 +7,7 @@ Use cWebPanel.pkg
 Use cWebMenuGroup.pkg
 Use cWebMenuItem.pkg
 Use cWebForm.pkg
+Use LigaSelect.wo
 
 Use cligaDataDictionary.dd
 Use cequipoDataDictionary.dd
@@ -59,8 +60,7 @@ Object oEquipoZoom is a cWebView
             Set psLabel to "LigaID"
             Set pbPromptButton to True
 
-// ToDo: Fill in the from-child parent Select view object name for navigate forward
-//            WebRegisterPath ntNavigateForward oSelectView
+            WebRegisterPath ntNavigateForward oLigaSelect
 
             Procedure OnPrompt
                 Send NavigatePath
@@ -75,8 +75,7 @@ Object oEquipoZoom is a cWebView
             Set psLabel to "Liga"
             Set pbPromptButton to True
 
-// ToDo: Fill in the from-child parent Select view object name for navigate forward
-//            WebRegisterPath ntNavigateForward oSelectView
+            WebRegisterPath ntNavigateForward oLigaSelect
 
             Procedure OnPrompt
                 Send NavigatePath
