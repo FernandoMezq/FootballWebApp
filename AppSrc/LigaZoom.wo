@@ -76,15 +76,16 @@ Object oLigaZoom is a cWebView
 
         End_Object 
         
-        Object oEquiposBtn is a cWebMenuItem
-         Set psCaption to "Equipos"
+       Object oEquiposBtn is a cWebMenuItem
+        
+        Set psCaption to "Equipos"
 
-            WebRegisterPath ntNavigateForward oEquipoSelect
+    WebRegisterPath ntNavigateForward oEquipoSelect
 
          Procedure OnClick
-        Send NavigatePath
+         Send NavigatePath
          End_Procedure
-        End_Object
+    End_Object
        
         Object oEditBtn is a cWebMenuItem
             Set psCSSClass to "WebEditMenuItem"
@@ -153,26 +154,28 @@ End_Procedure
         Send NavigateClose Self
     End_Procedure
 
-    Procedure OnNavigateForward tWebNavigateData NavigateData Integer hoInvokingView Integer hoInvokingObject
-        Case Begin
-            Case (NavigateData.eNavigateType = nfFromMain)
-                // If from main, this is a propbably a main file Select to Zoom.
-                Case Break
+   Procedure OnNavigateForward tWebNavigateData NavigateData Integer hoInvokingView Integer hoInvokingObject
 
-            Case (NavigateData.eNavigateType = nfFromParent)
-                // If from parent, this is a constrained drill down.
-                Case Break
+    Showln "Vengo de Main"
+    Showln "InvokingView: " hoInvokingView
+    Showln "InvokingObject: " hoInvokingObject
 
-            Case (NavigateData.eNavigateType = nfFromChild)
-                // If from child, this is a probably a parent Zoom from a Zoom.
-                Case Break
+    Case Begin
+        Case (NavigateData.eNavigateType = nfFromMain)
+            Case Break
 
-            Case Else // must be nfUndefined
+        Case (NavigateData.eNavigateType = nfFromParent)
+            Case Break
 
-        Case End
+        Case (NavigateData.eNavigateType = nfFromChild)
+            Case Break
 
-        Send SetActionButtons
+        Case Else // must be nfUndefined
 
-    End_Procedure
+    Case End
+
+    Send SetActionButtons
+
+        End_Procedure
 
 End_Object 

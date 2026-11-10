@@ -34,6 +34,7 @@ Object oLigaSelect is a cWebView
         Set pbFillHeight to True
         Set pbShowHeader to False
         Set piSortColumn to 0
+        Set piColumnIndex to 0
 
         Object oligaID is a cWebColumn
             Entry_Item liga.ID

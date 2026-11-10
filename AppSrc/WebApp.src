@@ -63,17 +63,6 @@ Object oWebApp is a cWebApp
                         End_Procedure
                     End_Object
 
-                    Object oEquipoSelectItem2 is a cWebMenuItem
-                        Set psCaption to "EquipoSelect"
-
-                        WebRegisterPath ntNavigateBegin oEquipoSelect
-
-                        Procedure OnClick
-                            Forward Send OnClick
-                                Send NavigatePath
-                        End_Procedure
-                    End_Object
-
                     Object oJugadorSelectItem1 is a cWebMenuItem
                         Set psCaption to "JugadorSelect"
 
@@ -155,6 +144,7 @@ Object oWebApp is a cWebApp
             
             Object oHorizontalBreadcrumb is a cWebBreadcrumb
                 Set piColumnIndex to 0
+                Set piColumnSpan to 1
                 WebSetResponsive pbRender rmMobile to False
             End_Object         
         End_Object
