@@ -2,9 +2,9 @@
    "Projects": [
      {
        "nZoom": 1,
-       "nPositionX": -434,
-       "nPositionY": -179,
-       "nWidth": 1191,
+       "nPositionX": -435,
+       "nPositionY": -64,
+       "nWidth": 1463,
        "nHeight": 670,
        "sProject": "WebApp.src",
        "bShowWebApp": true,
@@ -14,7 +14,127 @@
            "Name": "oDashboard",
            "Position": {
              "sX": "0",
-             "sY": "12.5"
+             "sY": "25"
+           },
+           "TabColor": {
+             "sColorDM": "#001634",
+             "sColorLM": "#CBE3FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oEntrenadorSelect",
+           "Position": {
+             "sX": "161,5",
+             "sY": "156"
+           },
+           "TabColor": {
+             "sColorDM": "#001634",
+             "sColorLM": "#CBE3FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oEntrenadorZoom",
+           "Position": {
+             "sX": "161,5",
+             "sY": "156"
+           },
+           "TabColor": {
+             "sColorDM": "#001634",
+             "sColorLM": "#CBE3FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oEquipoSelect",
+           "Position": {
+             "sX": "161,5",
+             "sY": "156"
+           },
+           "TabColor": {
+             "sColorDM": "#001634",
+             "sColorLM": "#CBE3FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oEquipoZoom",
+           "Position": {
+             "sX": "161,5",
+             "sY": "156"
+           },
+           "TabColor": {
+             "sColorDM": "#001634",
+             "sColorLM": "#CBE3FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oJugadorPosicionSelect",
+           "Position": {
+             "sX": "161,5",
+             "sY": "156"
+           },
+           "TabColor": {
+             "sColorDM": "#001634",
+             "sColorLM": "#CBE3FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oJugadorPosicionZoom",
+           "Position": {
+             "sX": "161,5",
+             "sY": "156"
+           },
+           "TabColor": {
+             "sColorDM": "#001634",
+             "sColorLM": "#CBE3FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oJugadorSelect",
+           "Position": {
+             "sX": "161,5",
+             "sY": "156"
+           },
+           "TabColor": {
+             "sColorDM": "#001634",
+             "sColorLM": "#CBE3FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oJugadorZoom",
+           "Position": {
+             "sX": "161,5",
+             "sY": "156"
+           },
+           "TabColor": {
+             "sColorDM": "#001634",
+             "sColorLM": "#CBE3FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oLigaSelect",
+           "Position": {
+             "sX": "161,5",
+             "sY": "156"
+           },
+           "TabColor": {
+             "sColorDM": "#001634",
+             "sColorLM": "#CBE3FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oLigaZoom",
+           "Position": {
+             "sX": "161,5",
+             "sY": "156"
            },
            "TabColor": {
              "sColorDM": "#001634",
@@ -25,24 +145,48 @@
          {
            "Name": "oLogin",
            "Position": {
-             "sX": "-425",
-             "sY": "0"
+             "sX": "161,5",
+             "sY": "156"
            },
            "TabColor": {
-             "sColorDM": "#006EFF",
-             "sColorLM": "#006EFF"
+             "sColorDM": "#001634",
+             "sColorLM": "#CBE3FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oPosicionSelect",
+           "Position": {
+             "sX": "161,5",
+             "sY": "156"
+           },
+           "TabColor": {
+             "sColorDM": "#001634",
+             "sColorLM": "#CBE3FF"
+           },
+           "bHidden": false
+         },
+         {
+           "Name": "oPosicionZoom",
+           "Position": {
+             "sX": "161,5",
+             "sY": "156"
+           },
+           "TabColor": {
+             "sColorDM": "#001634",
+             "sColorLM": "#CBE3FF"
            },
            "bHidden": false
          },
          {
            "Name": "oWebApp",
            "Position": {
-             "sX": "720",
-             "sY": "0"
+             "sX": "161,5",
+             "sY": "156"
            },
            "TabColor": {
-             "sColorDM": "#0058CF",
-             "sColorLM": "#2B8CFF"
+             "sColorDM": "#001634",
+             "sColorLM": "#CBE3FF"
            },
            "bHidden": false
          }

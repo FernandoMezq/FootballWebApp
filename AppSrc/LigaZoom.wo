@@ -7,7 +7,8 @@ Use cWebPanel.pkg
 Use cWebMenuGroup.pkg
 Use cWebMenuItem.pkg
 Use cWebForm.pkg
-
+Use EquipoZoom.wo
+Use EquipoSelect.wo
 Use cligaDataDictionary.dd
 
 Object oLigaZoom is a cWebView
@@ -74,7 +75,17 @@ Object oLigaZoom is a cWebView
             End_Procedure
 
         End_Object 
+        
+        Object oEquiposBtn is a cWebMenuItem
+         Set psCaption to "Equipos"
 
+            WebRegisterPath ntNavigateForward oEquipoSelect
+
+         Procedure OnClick
+        Send NavigatePath
+         End_Procedure
+        End_Object
+       
         Object oEditBtn is a cWebMenuItem
             Set psCSSClass to "WebEditMenuItem"
             Set psCaption to "Edit"
@@ -107,30 +118,30 @@ Object oLigaZoom is a cWebView
         End_Object 
     End_Object 
 
-    Procedure SetActionButtons
-        tWebNavigateData NavigateData
-        Boolean bHasRecord
-        Handle hoDD
+   Procedure SetActionButtons
+    tWebNavigateData NavigateData
+    Boolean bHasRecord
+    Handle hoDD
 
-        Get Server to hoDD
-        Get GetNavigateData to NavigateData
-        Get HasRecord of hoDD to bHasRecord
+    Get Server to hoDD
+    Get GetNavigateData to NavigateData
+    Get HasRecord of hoDD to bHasRecord
 
-        // let's hide all buttons and then Show the ones we want
-        WebSet pbRender of oEditBtn to False
-        WebSet pbRender of oSaveBtn to False
-        WebSet pbRender of oCancelChangesBtn to False
-        WebSet pbRender of oDeleteBtn to False
+    WebSet pbRender of oEditBtn to False
+    WebSet pbRender of oSaveBtn to False
+    WebSet pbRender of oCancelChangesBtn to False
+    WebSet pbRender of oDeleteBtn to False
+    WebSet pbRender of oEquiposBtn to True
 
-        If (NavigateData.bReadOnly) Begin
-            WebSet pbRender of oEditBtn to True
-        End
-        Else Begin
-            WebSet pbRender of oSaveBtn to True
-            WebSet pbRender of oCancelChangesBtn to True
-            WebSet pbRender of oDeleteBtn to bHasRecord
-        End
-    End_Procedure
+    If (NavigateData.bReadOnly) Begin
+        WebSet pbRender of oEditBtn to True
+    End
+    Else Begin
+        WebSet pbRender of oSaveBtn to True
+        WebSet pbRender of oCancelChangesBtn to True
+        WebSet pbRender of oDeleteBtn to bHasRecord
+    End
+End_Procedure
 
     Procedure OnViewSaved Handle hoServer Boolean bChanged
         // Close after save
