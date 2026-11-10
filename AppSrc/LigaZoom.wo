@@ -10,6 +10,9 @@ Use cWebForm.pkg
 Use EquipoZoom.wo
 Use EquipoSelect.wo
 Use cligaDataDictionary.dd
+Use cequipoDataDictionary.dd
+Use cWebList.pkg
+Use cWebColumn.pkg
 
 Object oLigaZoom is a cWebView
     Set piColumnCount to 12
@@ -22,6 +25,9 @@ Object oLigaZoom is a cWebView
 
     Object oliga_DD is a cligaDataDictionary
     End_Object 
+    Object oequipo_DD is a cequipoDataDictionary
+    Set DDO_Server to oliga_DD
+    End_Object
 
     Set Main_DD To oliga_DD
     Set Server  To oliga_DD
@@ -29,6 +35,7 @@ Object oLigaZoom is a cWebView
 
     Object oWebMainPanel is a cWebPanel
         Set piColumnCount to 12
+
         WebSetResponsive piColumnCount rmMobile to 4
 
         Object oligaID is a cWebForm
@@ -62,7 +69,17 @@ Object oLigaZoom is a cWebView
             Set peLabelPosition to lpTop
             Set psLabel to "Equipos"
         End_Object 
-    End_Object 
+
+        Object oWebList1 is a cWebList
+    Set pbShowHeader to True
+
+    Object oEquipoNombre is a cWebColumn
+        Entry_Item equipo.Nombre
+        Set psCaption to "Equipo"
+        Set piWidth to 300
+    End_Object
+        End_Object 
+  End_Object
 
     Object oActionGroup is a cWebMenuGroup
 
@@ -77,15 +94,15 @@ Object oLigaZoom is a cWebView
         End_Object 
         
        Object oEquiposBtn is a cWebMenuItem
-        
-        Set psCaption to "Equipos"
+    Set psCaption to "Equipos"
+    Set peActionDisplay to adMenu
 
     WebRegisterPath ntNavigateForward oEquipoSelect
 
-         Procedure OnClick
-         Send NavigatePath
-         End_Procedure
-    End_Object
+    Procedure OnClick
+        Send NavigatePath
+    End_Procedure
+End_Object
        
         Object oEditBtn is a cWebMenuItem
             Set psCSSClass to "WebEditMenuItem"
