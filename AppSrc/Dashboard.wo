@@ -51,7 +51,7 @@ Object oDashboard is a cWebView
                 
             End_Object
     
-            Object oTile2 is a cWebHtmlBox
+            Object oTileEquipo is a cWebHtmlBox
                 Set pbServerOnClick to True
                 Set piColumnSpan to 6
                 Set piColumnIndex to 6
@@ -68,7 +68,7 @@ Object oDashboard is a cWebView
                 
             End_Object
     
-            Object oTile3 is a cWebHtmlBox
+            Object oTileJugador is a cWebHtmlBox
                 Set pbServerOnClick to True
                 Set piColumnSpan to 6
                 Set psCSSClass to "Tile Dark"
@@ -82,7 +82,7 @@ Object oDashboard is a cWebView
                 
             End_Object
     
-            Object oTile4 is a cWebHtmlBox
+            Object oTileLiga is a cWebHtmlBox
                 Set pbServerOnClick to True
                 Set piColumnSpan to 6
                 Set piColumnIndex to 6
@@ -98,7 +98,7 @@ Object oDashboard is a cWebView
             End_Object
             
                 
-          Object oTile5 is a cWebHtmlBox
+          Object oTileEntrenador is a cWebHtmlBox
             Set pbServerOnClick to True
             Set piColumnSpan to 6
             Set psCSSClass to "Tile Light"
@@ -112,7 +112,7 @@ Object oDashboard is a cWebView
     End_Procedure
           End_Object
           
-          Object oTile6 is a cWebHtmlBox
+          Object oTilePosicion is a cWebHtmlBox
              Set pbServerOnClick to True
              Set piColumnSpan to 6
              Set psCSSClass to "Tile Dark"
