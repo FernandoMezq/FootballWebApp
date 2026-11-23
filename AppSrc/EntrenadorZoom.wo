@@ -71,6 +71,16 @@ Object oEntrenadorZoom is a cWebView
             Set peLabelPosition to lpTop
             Set psLabel to "Nacionalidad"
         End_Object 
+        
+        Object oentrenadorEquipoID is a cWebForm
+    Entry_Item entrenador.EquipoID
+            Set piColumnSpan to 8
+            Set piColumnIndex to 0
+            Set peLabelPosition to lpTop
+            Set psLabel to "EquipoID"
+    End_Object
+        
+        
     End_Object 
 
     Object oActionGroup is a cWebMenuGroup
@@ -117,10 +127,14 @@ Object oEntrenadorZoom is a cWebView
         End_Object
         
         Object oDespedirBtn is a cWebMenuItem
-        Set psCaption to "Despedir"
+         Set psCaption to "Despedir"
+         Set peActionDisplay to adActionBar
+         Set psCSSClass to "WebDeleteMenuItem"
 
         Procedure OnClick
-            Clear equipo
+            Send ChangeEditMode True
+            Send Clear of oequipo_DD
+             Set Field_Changed_Value of oentrenador_DD Field entrenador.EquipoID to 0
             Send Request_Save
         End_Procedure
         End_Object
