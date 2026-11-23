@@ -69,13 +69,19 @@ Object oJugadorZoom is a cWebView
             Set psLabel to "Apellido"
         End_Object 
 
-        Object ojugadorNacionalidad is a cWebForm
-            Entry_Item jugador.Nacionalidad
-            Set piColumnSpan to 8
-            Set piColumnIndex to 0
-            Set peLabelPosition to lpTop
-            Set psLabel to "Nacionalidad"
-        End_Object 
+        Object oNacionalidadGroup is a cWebGroup
+    Set piColumnIndex to 0
+    Set piColumnSpan to 8
+    Set piColumnCount to 8
+
+    Object oJugadorNacionalidad is a cWebCombo
+        Entry_Item jugador.Nacionalidad
+        Set piColumnSpan to 8
+        Set psLabel to "Nacionalidad"
+        Set peLabelPosition to lpTop
+    End_Object
+
+End_Object
 
        Object oequipoNombre is a cWebForm
     Entry_Item equipo.Nombre
