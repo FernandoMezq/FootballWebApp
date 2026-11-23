@@ -8,7 +8,15 @@ Class cligaDataDictionary is a DataDictionary
     Procedure Construct_Object
         Forward Send Construct_Object
         Set Main_File to liga.File_Number
-
+        
+        Set Key_Field_State Field liga.ID to True
+        Set Field_Option Field liga.Nombre DD_NoEnter to True
+        Set Field_Option Field liga.Nombre DD_Required to True
+        Set Field_Option Field liga.Pais DD_Required to True
+        Set Field_Option Field liga.Equipos DD_Required to True
+        Set Field_Option Field liga.EquiposMax DD_Required to True
+        
+        
         Set Add_Client_File to equipo.File_Number
 
         Set Foreign_Field_Option DD_KEYFIELD DD_NOPUT to True
