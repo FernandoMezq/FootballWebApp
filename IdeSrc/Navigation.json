@@ -1,11 +1,11 @@
 {
    "Projects": [
      {
-       "nZoom": 1,
-       "nPositionX": -435,
-       "nPositionY": -64,
-       "nWidth": 1463,
-       "nHeight": 670,
+       "nZoom": 0.6,
+       "nPositionX": -648.33331299,
+       "nPositionY": -73.33333588,
+       "nWidth": 1984.99993896,
+       "nHeight": 1116.6667099,
        "sProject": "WebApp.src",
        "bShowWebApp": true,
        "bShowHidden": false,
