@@ -2,6 +2,8 @@
 
 Open entrenador
 Open equipo
+Open CodeMast
+Open CodeType
 
 Class centrenadorDataDictionary is a DataDictionary
 
@@ -26,8 +28,17 @@ Class centrenadorDataDictionary is a DataDictionary
         Set Foreign_Field_Option DD_KEYFIELD DD_FINDREQ to True
         Set Foreign_Field_Option DD_INDEXFIELD DD_NOPUT to True
         Set Foreign_Field_Option DD_DEFAULT DD_DISPLAYONLY to True
+        
+           Object oNacionalidadEntrenador is a CodeValidationTable
+        Set Type_Value to "Nacion"
+            End_Object
+
+            Set Field_Value_Table Field entrenador.Nacionalidad to oNacionalidadEntrenador
+
 
     End_Procedure
+    
+    
 
 
     Procedure Attach_Main_File

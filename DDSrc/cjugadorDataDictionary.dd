@@ -3,6 +3,8 @@
 Open jugador
 Open jugadorposicion
 Open equipo
+Open CodeMast
+Open CodeType
 
 Class cjugadorDataDictionary is a DataDictionary
     
@@ -26,6 +28,12 @@ Class cjugadorDataDictionary is a DataDictionary
         Set Foreign_Field_Option DD_KEYFIELD DD_FINDREQ to True
         Set Foreign_Field_Option DD_INDEXFIELD DD_NOPUT to True
         Set Foreign_Field_Option DD_DEFAULT DD_DISPLAYONLY to True
+        
+        Object oNacionalidadJugador is a CodeValidationTable
+    Set Type_Value to "Nacion"
+End_Object
+
+Set Field_Value_Table Field jugador.Nacionalidad to oNacionalidadJugador
 
     End_Procedure
 
